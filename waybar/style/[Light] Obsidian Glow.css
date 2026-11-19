@@ -1,0 +1,124 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "IosevkaNF";
+    font-size: 15px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+    border: none;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.modules-center, 
+.modules-left {
+    margin-left: 0px;
+    padding: 0;
+}
+
+.modules-right{
+    margin-right: 5px;
+}
+
+/* Left-side modules */
+
+/* Workspaces */
+#workspaces {
+    background: rgba(30, 32, 29, 0.88);
+    border: 1px solid @on_primary_fixed;
+    border-radius: 8px 0 0 8px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: white;
+    padding: 0 10px;
+}
+
+#workspaces button.active {
+    background: @on_primary;
+    border-radius: 4px;
+}
+
+/* Music */
+#music {
+     background: @primary;
+    border: 1px solid #C3B1E1;
+    border-radius: 0 8px 8px 0;
+    padding: 0 4px;
+
+}
+
+#music #mpris {
+    color: black;
+    padding: 0 10px;
+}
+
+#music #custom-music-play{
+    color: black;
+    padding: 0 8px;
+}
+
+#music #custom-music-play:hover{
+    background: @on_primary_fixed;
+    border-radius: 6px;
+}
+/* Center modules */
+
+#clock {
+    background: rgba(30, 32, 29, 0.88);
+    border: 1px solid @on_primary_fixed;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 0;
+}
+
+/* Right-side modules */
+
+#network,
+#cpu,
+#pulseaudio,
+#battery,
+#custom-swaync {
+    background: rgba(30, 32, 29, 0.88);
+    border-top: 1px solid @on_primary_fixed;
+    border-bottom: 1px solid @on_primary_fixed;
+    padding: 0 8px;
+    margin: 0;
+}
+
+/* First */
+#network {
+    border-left: 1px solid @on_primary_fixed;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Middle */
+#cpu,
+#pulseaudio,
+#battery {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+#pulseaudio.muted {
+    color: @error_container;
+}
+
+/* Last */
+#custom-swaync {
+    border-left: none;
+    border-right: 1px solid @on_primary_fixed;
+    border-radius: 0 8px 8px 0;
+}
